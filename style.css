@@ -1,0 +1,45 @@
+body
+{
+  background-color: ghostwhite;
+  font-family: auto;
+}
+  label
+  {
+    font-weight: bolder;
+  }
+  #ageRange
+  {
+    width: 30%;
+    margin-inline-start: 3%;
+  }
+  .btn-group>.btn
+  {
+    margin-inline-start: 33%;
+    background-color: #0035ffc7;
+
+  }
+  /* submitt button ----*/
+  #submitButton
+  {
+    text-align: center;
+    margin-top: 3%;
+    font-size: xx-large;
+  }
+  .btn-primary 
+  {
+    font-size: smaller;
+    background-color: #0035ffc7;
+  }
+h2
+{
+    text-align: center;
+}
+/*--------table-*/
+.col
+{
+  font-weight: 900;
+}
+.border-1 {
+  --bs-border-width: 1rem;
+  border-bottom-color: cadetblue;
+}

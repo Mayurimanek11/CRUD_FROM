@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h2>CRUD Form</h2>
+      <section>
+        <div id=" msg mb-5"></div>
+          <form  name="myFrom">
+            <!----------------name---------->
+            <div class=" from-group  mb-3">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="Enter Name" class="form-control"required>
+              
+            </div>
+            <!-------email------------->
+            <div class=" from-group  mb-3">
+              <label for="email">email</label>
+              <input type="email" name="email" id="email" placeholder="Enter email" class="form-control">
+            </div>
+            <!----------phone number------->
+            <div class=" from-group  mb-3">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter phone Number"
+                class="form-control">
+            </div>
+            <!----------birth date------->
+            <div class=" from-group  mb-3">
+              <label for="BirthDate">Birth Date</label>
+              <input type="date" name="BirthDate" id="birthDate" placeholder="Enter Birth Date" class="form-control">
+            </div>
+            <!----------------appointment-------->
+            <div class=" from-group  mb-3">
+              <label for="AppointmentTime">Appointment Time</label>
+              <input type="time" name="AppointmentTime" id="appointmentTime" placeholder="Appointment Time"
+                class="form-control">
+            </div>
+            <!-------color drop down---------->
+            <div class=" from-group  mb-3">
+              <label for="FavoriteColor" //id="favColor">Favorite Color</label>
+              <div class="btn-group dropend">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="favColor">
+                  Colors
+                </button>
+                <ul class="dropdown-menu" name="FavoriteColor">
+                  <li><a class="dropdown-item">Black</a></li>
+                  <li><a class="dropdown-item">Pink</a></li>
+                  <li><a class="dropdown-item">Green</a></li>
+                  <li><a class="dropdown-item">Yellow</a></li>
+                </ul>
+              </div>
+              <!-----------payment radio-->
+              <div class=" from-group mt-3 mb-3"//id="Payment">
+                <label for="PaymentMethod">Payment Method</label>
+                <div>
+                  <input type="radio" id="Payment" name="PaymentMethod" value="cash"
+                         checked >
+                  <label for="cash">Cash</label>
+                </div>
+                <div>
+                  <input type="radio" id="Payment" name="PaymentMethod" value="Gpay" >
+                  <label for="Gpay">Gpay</label>
+                </div>
+                <div>
+                  <input type="radio" id="Payment" name="PaymentMethod" value="Credit Card">
+                  <label for="Credit Card">Credit Card</label>
+                </div>
+                <div>
+               <!---------------range-------------->
+               <div class=" from-group mt-3 mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="range"  id="age">
+                </div>
+                <!--------------check box--------->
+                <div class=" from-group mt-3 mb-3" //id="course">
+                  <label for="option">Select Optioms</label>
+                  <div class="form-check mt-3">
+                    <label class="form-check-label" for="course">Option_1</label>
+                    <input class="form-check-input" type="checkbox" value="" id="option">
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label" for="option">Option_2</label>
+                  <input class="form-check-input" type="checkbox" value="" id="option">
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label" for="option">Option_3</label>
+                    <input class="form-check-input" type="checkbox" value="" id="option">
+                  </div>
+
+                  </div>
+                  <!------------file upload------------>
+                  <div class=" from-group mt-3 mb-3">
+                    <label for="formFile" class="form-label">Upload photo</label>
+                    <input class="form-control" type="file" id="formFile">
+                    </div>
+              
+            </div>
+          </form>
+
+          <div id="submitButton">
+             <button type="button" onclick="submitForm()" class="btn btn-primary">Submit Form</button>
+          </div>
+      </section>
+      <hr>
+      <!----------------table----------->
+      <section>
+        <div class="mt-5">
+          <h2>TABLE</h2>
+          <table class="table table-hover border-1">
+            <tr>
+              <td class="col">Name</td>
+              <td class="col">Email</td>
+              <td class="col">Phone Number</td>
+              <td class="col">Birth Date</td>
+              <td class="col">Appointment Time</td>
+              <td class="col">Favorite Color </td>
+              <td class="col">Payment Method</td>
+              <td class="col">Age</td>
+              <td class="col">Courses</td>
+              <td class="col">Photo</td>
+
+            </tr>
+  
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>
