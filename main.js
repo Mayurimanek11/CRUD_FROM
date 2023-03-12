@@ -1,3 +1,18 @@
+//-submit funcation
+function submitForm()
+ {
+    
+    var dataEntered = retrieveData();
+   //  console.log("CALL THIS", dataEntered);
+    var readData = readingDatafromLocalStorage(dataEntered);
+   //  insert(readData);
+    validDaName();
+    validDataEmail()
+    validDataNumber()
+
+}
+//--------validation
+//-------name validation
 function validDaName()
 {  
    
@@ -7,33 +22,36 @@ function validDaName()
    return false;
 }  
 }
-
-
-// function validDataEmail()
-// {
+//-email validation
+function validDataEmail()
+{
    
-//    var email= document.getElementById('email').value
-//    var atposition=x.indexOf("@");  
-//    var dotposition=x.lastIndexOf(".");  
-//    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
-//    alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
-//   return false;  
-//   }  
-// }
-
-
-
-function submitForm()
+   var email= document.getElementById('email').value
+  var  emailMatch= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(email.match(emailMatch) )
+  {
+   return true
+  }
+  else{
+   alert("email is not valid")
+  }
+   
+  }  
+//-number validation
+function validDataNumber()
  {
-    
-    var dataEntered = retrieveData();
-   //  console.log("CALL THIS", dataEntered);
-   //  validDataEmail();
-    var readData = readingDatafromLocalStorage(dataEntered);
-    insert(readData);
-    validDataName();
+   
+   let z = document.getElementById('phoneNumber').value;
+   if(!z.match(/^\d+/))
+      {
+         alert("only numeric value add 0-9")
+      }
+      return false;
 
-}
+ }
+
+
+
 //retrivedata
   
 
@@ -74,19 +92,8 @@ function submitForm()
 
    function insert(readData) 
    {
-      let table = document.getElementById('table')
-      var row = table.insertRow();
-      row.insertCell(0).innerHTML = readData[0];
-      row.insertCell(1).innerHTML = readData[1];
-      row.insertCell(2).innerHTML = readData[2];
-      row.insertCell(3).innerHTML = readData[3];
-      row.insertCell(4).innerHTML = readData[4];
-      row.insertCell(5).innerHTML = readData[5];
-      row.insertCell(6).innerHTML = readData[6];
-      row.insertCell(7).innerHTML = readData[7];
-      row.insertCell(8).innerHTML = readData[8];
-      row.insertCell(9).innerHTML = readData[9];
+      let table = document.getElementsByClassName('myTable')
+      
 
 
    }
-
